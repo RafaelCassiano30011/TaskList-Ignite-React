@@ -1,4 +1,5 @@
 {
+  "homepage": "https://rafaelcassiano30011.github.io/TaskList-Ignite-React",
   "name": "01-github-explorer",
   "version": "1.0.0",
   "main": "index.js",
@@ -6,9 +7,12 @@
   "scripts": {
     "dev": "webpack serve",
     "build": "cross-env NODE_ENV=production webpack",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0"
